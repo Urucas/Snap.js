@@ -7,7 +7,8 @@ var addEvent = function addEvent(element, eventName, func) {
 };
 
 addEvent(document.getElementById('open-left'), 'click', function(){
-	if(snapper.state().state == "close") {
+	console.log(snapper.state().state);
+	if(snapper.state().state == "closed") {
 		snapper.open('left');
 	}else {
 		snapper.close();
